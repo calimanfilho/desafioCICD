@@ -7,5 +7,11 @@ variable "network_name" {
 variable "label_name" {
   description = "Nome da Etiqueta"
   type        = string
-  default     = "DIO"
+  default     = "dio"
+}
+
+variable "project_id" {
+  description = "ID do Projeto"
+  type        = string
+  default     = "potent-result-374121"
 }

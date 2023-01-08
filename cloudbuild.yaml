@@ -5,6 +5,6 @@ steps:
   entrypoint: 'sh'
   args: 
   - '-c'
-  - | 
-   
-    terraform apply -auto-approve
+  - |
+      terraform init
+      terraform apply -auto-approve

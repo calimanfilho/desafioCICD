@@ -9,13 +9,12 @@ terraform {
     bucket  = "calimanfilho-terraform"
     prefix  = "terraform/state"
   }
-  
 }
 
 provider "google" {
-  project = "potent-result-374121"
+  project = "${var.project_id}"
   region  = "us-east1"
-  zone    = "us-east1-a"
+  zone    = "us-east1-b"
 }
 
 resource "google_compute_network" "vpc_network" {
