@@ -1,6 +1,8 @@
 # Desafio Criando um Pipeline de CI/CD
-
 Neste projeto, será implementado um Pipeline de CI/CD fazendo uso do Cloud Build e Terraform. Todo o procedimento será descrito abaixo, com os _prints_ de cada etapa.
+
+> ℹ️ **_INFO_**  
+> Antes da realização dos procedimentos abaixo, deve-se ativar a API do Compute Engine e do Cloud Build. Além disso deve ser concedido a permissão de editor para a conta de serviço do Cloud Builder.
 
 1. Foi realizado o clone do diretório do repositório do desafio da DIO, [terraform-exemplo2](https://github.com/digitalinnovationone/terraform-gcp/tree/main/terraform-exemplo2), para o repositório [atual](https://github.com/calimanfilho/desafioCICD), para que seja configurado a _trigger_ do Cloud Build.
 
@@ -26,3 +28,12 @@ Neste projeto, será implementado um Pipeline de CI/CD fazendo uso do Cloud Buil
     ```
 
 6. Para testar, será modificado no [main.tf](main.tf), o argumento `name` do recurso `google_compute_instance.vm_instance` será alterando de `terraform-instance` para `cloudbuild-terraform`.
+
+    ![Instância Terraform Instance](images/vm-terraform-instance.png)
+
+    ![Instância Cloudbuild Terraform](images/vm-cloudbuild-terraform.png)
+    
+
+7. Após alguns erros de configuração que foram corrigidos, o gatilho do Cloud Build funcionou corretamente.
+
+    ![Histórico de Gatilho](images/historico-gatilhos.png)
